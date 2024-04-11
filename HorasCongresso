@@ -1,0 +1,27 @@
+..:HorasCongresso:..
+
+import java.util.Scanner;
+
+public class HorasNoCOngresso {
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner(System.in);
+    
+    System.out.println("Quantas horas teve o congresso?");
+    double HorasCongresso = leitor.nextInt();
+    
+    System.out.println("Quantas horas voce compareceu?");
+    double HorasPresente = leitor.nextInt();
+    
+    double porcentagem = (HorasPresente / HorasCongresso);
+    
+    if (porcentagem >= 0.75) {
+        System.out.println("Voce tem horas o suficiente");
+        
+    } else {
+        System.out.println("Voce nao tem horas o suficiente");
+    }
+    
+    }
+    
+} 
+    
