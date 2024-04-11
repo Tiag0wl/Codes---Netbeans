@@ -1,0 +1,22 @@
+package projetaocomadarioo;
+
+
+public class MediasNotas {
+  
+    public static void main(String[] args) {
+        double nota1, nota2, nota3;   
+        nota1 = 10.0;
+        nota2 = 6.5;
+        nota3 = 7.5;
+        
+        double somaNotas;
+        somaNotas = nota1 + nota2 + nota3;
+        
+        double mediaArit;
+        mediaArit = somaNotas / 3;
+        
+        System.out.println( "Soma = " + somaNotas);
+        System.out.println( "Media = " + mediaArit );
+    }
+
+}
