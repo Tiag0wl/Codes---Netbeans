@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+public class Notas {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner (System.in);
+    
+    System.out.println("Numero Aulas: ");
+    int numAulas = leitor.nextInt();
+    
+    System.out.println("Numero Dias Presentes: ");
+    int numPresenca = leitor.nextInt();
+
+    double frequencia;
+        frequencia = (numPresenca / numAulas);
+    
+    if (frequencia >= 0.75) {         
+        System.out.println("Frequencia Suficiente");
+        
+        System.out.println("Agora Digite suas notas");
+       
+    System.out.println("Sua Nota no Primeiro Trimestre:");
+        int Nota1 = leitor.nextInt();
+        
+         System.out.println("Sua Nota no Segundo Trimestre:");
+        int Nota2 = leitor.nextInt();
+        
+         System.out.println("Sua Nota no Terceiro Trimestre:");
+        int Nota3 = leitor.nextInt();
+        
+    double Media = ( (Nota1 + Nota2 + Nota3) / 3);
+    } else {         
+        System.out.println("");
+        
+        
+        
+        if (Nota <= 1.8) {
+            System.out.println("Reprovado");
+            
+        } else {
+            System.out.println("Em exame");}
+        
+    }
+    }
+    
+    
+    
+}
