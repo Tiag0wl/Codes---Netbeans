@@ -8,7 +8,7 @@ public class Notas {
     System.out.println("Numero Aulas: ");
     int numAulas = leitor.nextInt();
     
-    System.out.println("Numero Dias Presentes: ");
+    System.out.println("Numero Dias Presentes:");
     int numPresenca = leitor.nextInt();
 
     double frequencia;
@@ -29,16 +29,11 @@ public class Notas {
         int Nota3 = leitor.nextInt();
         
     double Media = ( (Nota1 + Nota2 + Nota3) / 3);
-    } else {         
-        System.out.println("");
-        
-        
-        
-        if (Nota <= 1.8) {
-            System.out.println("Reprovado");
-            
-        } else {
-            System.out.println("Em exame");}
+
+if (Media <= 1.8) {
+          System.out.println("Reprovado");
+} else {
+          System.out.println("Em exame");}
         
     }
     }
