@@ -5,10 +5,10 @@ import java.util.Scanner;
     Scanner leitor = new Scanner (System.in);
     
     System.out.println("Numero Aulas: ");
-    int numAulas = leitor.nextInt();
+    double numAulas = leitor.nextInt();
     
     System.out.println("Numero Dias Presentes:");
-    int numPresenca = leitor.nextInt();
+    double numPresenca = leitor.nextInt();
 
     double frequencia;
         frequencia = (numPresenca / numAulas);
@@ -17,17 +17,17 @@ import java.util.Scanner;
         System.out.println("reprovado"); }
 
      else {
-        System.out.println("Frequencia Suficiente");
-        System.out.println("Agora Digite suas notas");
+         System.out.println("Frequencia Suficiente");
+         System.out.println("Agora Digite suas notas");
        
-        System.out.println("Sua Nota no Primeiro Trimestre:");
-        int Nota1 = leitor.nextInt();
+         System.out.println("Sua Nota no Primeiro Trimestre:");
+         double Nota1 = leitor.nextInt();
         
          System.out.println("Sua Nota no Segundo Trimestre:");
-        int Nota2 = leitor.nextInt();
+         double Nota2 = leitor.nextInt();
         
          System.out.println("Sua Nota no Terceiro Trimestre:");
-        int Nota3 = leitor.nextInt();
+         double Nota3 = leitor.nextInt();
  
     double Media;
         Media = ( (Nota1 + Nota2 + Nota3) / 3);
@@ -40,5 +40,5 @@ import java.util.Scanner;
  else {
           System.out.println("Em exame"); }
     }      
-    }   
-    }
+   }   
+  }
