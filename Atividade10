@@ -1,0 +1,30 @@
+package projetaocomadarioo;
+
+import java.util.Scanner;
+public class Atividade10 {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner (System.in);
+    
+    System.out.println("Qual o valor do seu salario em reais?");
+    double Salario = leitor.nextInt();
+    
+    System.out.println("Voce divide seu salario em quantas vezes para pagar seu aluguel?");
+    double ParteAluguel = leitor.nextInt();
+    
+    double Aluguel;
+    Aluguel = (Salario / ParteAluguel);
+    
+    System.out.print("Voce paga R$");
+    System.out.print(Aluguel);
+    System.out.println(" de aluguel.");
+    
+    double percentual;
+    percentual = ( ParteAluguel % Salario );
+    
+    System.out.print("E voce utilizou ");
+    System.out.print(percentual);
+    System.out.println("% do seu salario para pagar o aluguel");
+    }
+    
+}
