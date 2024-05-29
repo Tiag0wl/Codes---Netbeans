@@ -1,0 +1,23 @@
+package projetaocomadarioo;
+
+import java.util.Scanner;
+public class Atividade11 {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner (System.in);
+    
+    System.out.println("Quantos kg voce comprou de carne?");
+    double kilos = leitor.nextInt();
+    
+    System.out.println("Quanto voce pagou?");
+    double preco = leitor.nextInt();
+    
+    double valorkg;
+    valorkg = (preco / kilos);
+    
+    System.out.print("Voce pagou R$");
+    System.out.print(valorkg);
+    System.out.println(" por kilo.");
+    }
+    
+}
