@@ -1,0 +1,61 @@
+package com.mycompany.algoritimosatvividades;
+
+import java.util.Scanner;
+public class Atividade8 {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner (System.in);
+
+     System.out.println("Digite a extensao total do trajeto em km");
+           double Extensao;
+           Extensao = leitor.nextDouble();
+           
+     System.out.println("Digite a velocidade media padrao em km/h");
+           double VelocidadePadrao;
+           VelocidadePadrao = leitor.nextDouble();
+           
+     System.out.println("Digite a velocidade media ajustada em km/h");
+           double VelocidadeAjustada;
+           VelocidadeAjustada = leitor.nextDouble();
+           
+    double TempoPadrao;
+    TempoPadrao = ( Extensao / VelocidadePadrao );
+    
+    double TempoAjustado;
+    TempoAjustado = ( Extensao / VelocidadeAjustada );
+    
+    System.out.println("Com a velocidade media padrao voce ira demorar");
+    System.out.print(TempoPadrao);
+    System.out.println(" horas.");
+     
+    System.out.println("Com a velocidade media ajustada voce ira demorar");
+    System.out.print(TempoAjustado);
+    System.out.println(" horas.");
+    
+    double Diferenca;
+    Diferenca = (TempoAjustado - TempoPadrao);   
+    if(Diferenca < 0) { 
+        Diferenca = (Diferenca * -1);
+    }
+    
+    System.out.println("Ja a diferenca de tempo entre a velocidade media ajustada, e a padrao, e de");
+    System.out.print(Diferenca);
+    System.out.println(" horas.");
+    
+    double DistanciaAjustada;
+    DistanciaAjustada = (VelocidadeAjustada * TempoPadrao);
+    
+    System.out.println("E caso voce viaje com a velocidade media ajustada no mesmo tempo que com a velocidade padrao, voce iria percorrer ");
+    System.out.print(DistanciaAjustada);
+    System.out.println(" km");
+    
+    double DiferencaExtensao;
+    DiferencaExtensao = (DistanciaAjustada - Extensao);
+    
+    System.out.println("E a diferenca entre essa kilometragem e a extensao total do trajeto e de: ");
+    System.out.print(DiferencaExtensao);
+    System.out.println(" km");
+            
+    }
+    
+}
