@@ -1,0 +1,56 @@
+package com.mycompany.algoritimosatvividades;
+
+import java.util.Scanner;
+public class Atividade7 {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner (System.in);
+    
+    System.out.println("Digite quantos quilometros voce percorrera");
+           double distancia;
+           distancia = leitor.nextDouble();
+           
+    System.out.println("Digite a sua velocidade media km/h");
+           double velocidade;
+           velocidade = leitor.nextDouble();
+           
+     System.out.println("Digite o intervalo de tempo que voce ja viajou em horas");
+           double intervalo;
+           intervalo = leitor.nextDouble();
+           
+           double distanciaIntervalo;
+           distanciaIntervalo = (velocidade * intervalo);
+           
+           double distanciaRestante;
+           distanciaRestante = (distanciaIntervalo - distancia);
+           if(distanciaRestante < 0) { 
+           distanciaRestante = (distanciaRestante * -1);
+           }
+           double tempoPrevisto;
+           tempoPrevisto = (distancia / velocidade);
+           if(tempoPrevisto < 0) { 
+           tempoPrevisto = (tempoPrevisto * -1);
+           }                
+           double tempoDistanciaRestante;
+           tempoDistanciaRestante = (distanciaRestante / velocidade);
+            if(tempoDistanciaRestante < 0) { 
+           tempoDistanciaRestante = (tempoDistanciaRestante * -1);
+           }                 
+           System.out.print("O tempo previsto para voce completar o trajeto e de ");
+           System.out.print(tempoPrevisto);
+           System.out.println(" horas");
+           
+           System.out.print("Voce percorreu ");
+           System.out.print(distanciaIntervalo);
+           System.out.println(" km");
+           
+           System.out.print("Faltam ");
+           System.out.print(distanciaRestante);
+           System.out.println(" km");
+           
+           System.out.print("E voce ira demorar  ");
+           System.out.print(tempoDistanciaRestante);
+           System.out.println(" horas");
+    }
+    
+}
