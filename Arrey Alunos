@@ -1,0 +1,48 @@
+package projetaocomadarioo;
+
+import java.util.Scanner;
+public class AtividadeAula03do07 {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner(System.in);
+     
+    String[] nomes = new String[10];
+    double [] [] notas = new double[10][2];
+    for(int i=0; i<10; i++) {
+        nomes[i]= leitor.nextLine();
+    }
+    for(int a=0; a<10; a++) {
+        System.out.println("Notas de " + nomes[a]);
+        for(int n=0; n<2; n++){
+            notas[a][n] = leitor.nextDouble();
+        }
+    }
+        double [] mediaAluno = new double[10];
+        double [] mediaAvaliacao = new double [2];
+        double mediaGeral;
+        
+            for(int a=0; a<10; a++) {
+                for (int n=0; n<2; n++) {
+                    mediaAluno [a] += notas [a] [n] ;                 
+                }
+                mediaAluno[a] /= 2.0;
+            }
+             mediaAvaliacao[0] /= 10.0;
+             mediaAvaliacao[1] /= 10.0;
+             mediaGeral = (mediaAvaliacao[0] + mediaAvaliacao[1]) / 2.0; 
+             
+             System.out.println("Media avaliacao: " + mediaAvaliacao);
+             System.out.println("Media alunos: " + mediaAluno);
+             System.out.println("Media aluno 1: " + mediaAluno[0]);
+             System.out.println("Media aluno 2: " + mediaAluno[1]);
+             System.out.println("Media aluno 3: " + mediaAluno[2]);
+             System.out.println("Media aluno 4: " + mediaAluno[3]);
+             System.out.println("Media aluno 5: " + mediaAluno[4]);
+             System.out.println("Media aluno 6: " + mediaAluno[5]);
+             System.out.println("Media aluno 7: " + mediaAluno[6]);
+             System.out.println("Media aluno 8: " + mediaAluno[7]);
+             System.out.println("Media aluno 9: " + mediaAluno[8]);
+             System.out.println("Media aluno 10: " + mediaAluno[9]);
+    }
+    
+}
