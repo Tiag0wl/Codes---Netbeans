@@ -1,0 +1,25 @@
+package projetaocomadarioo;
+
+public class TestaConta {
+
+    public static void main(String[] args) {
+   AtividadeAula23do07 minhaConta = new AtividadeAula23do07 ();
+    
+    System.out.println("Saldo:" + minhaConta.getSaldo() );
+    System.out.println(minhaConta.saque (50.0) );
+    System.out.println(minhaConta.deposito (-50.0) );
+    System.out.println(minhaConta.deposito (50.0) );
+    System.out.println("Saldo:" + minhaConta.getSaldo() );
+    System.out.println(minhaConta.saque (50.0) );
+    System.out.println("Saldo:" + minhaConta.getSaldo() );
+    
+        System.out.println(AtividadeAula23do07.getQuantContas() );
+        
+        AtividadeAula23do07 outraConta = new AtividadeAula23do07 ();
+        AtividadeAula23do07 novaConta = new AtividadeAula23do07 ();
+        
+        System.out.println(AtividadeAula23do07.getQuantContas() );
+
+    }
+    
+}
