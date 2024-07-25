@@ -9,24 +9,11 @@ public class Pizzaria {
         int tamanho = leitor.nextInt();
         
         switch (tamanho) {
-            case 1, 2:
-                System.out.println("Voce tera direito a somente um sabor");
-                break;
-            case 3: 
-                System.out.println("Voce tera direito a tres sabores");
-                break;
-            case 4:
-                System.out.println("Voce tera direito a quatro sabores");
-                break;
-            case 5:
-                System.out.println("Voce tera direito a cinco sabores");
-                break;
-            default:
-                System.out.println("Nao ha esse tamanho seu animal, escolha de 1 a 5");
-                break;
-                              
-            
-                
+            case 1, 2 : System.out.println("Voce tera direito a somente um sabor");
+            case 3 : System.out.println("Voce tera direito a tres sabores");
+            case 4 : System.out.println("Voce tera direito a quatro sabores");
+            case 5 : System.out.println("Voce tera direito a cinco sabores");
+            default : System.out.println("Nao ha esse tamanho seu animal, escolha de 1 a 5");         
         }
     }
     
