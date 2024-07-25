@@ -1,0 +1,31 @@
+package Atividade;
+
+import java.util.Scanner;
+public class Questao2 {
+
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner (System.in);
+    
+    System.out.println("Escreva o raio do circulo em cm:");
+    double raio = leitor.nextDouble();
+    double pi = Math.PI;
+    
+    double perimetro;
+    
+    perimetro = (2 *  pi * raio);
+    
+    double area;
+    area = (3 * raio * raio);
+    
+    double volumeEsfera;
+    volumeEsfera = (4 * pi * raio * raio * raio / 3 );
+    
+    double areaEsfera;
+    areaEsfera = (4 * pi * raio * raio );
+    
+    System.out.print("O perimetro:" + perimetro);
+    System.out.print("A area:" + area);
+    System.out.print("O volume da esfera:" + volumeEsfera);                                                                                                                
+    System.out.print("A area da esfera:" + areaEsfera);
+    }    
+}
