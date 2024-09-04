@@ -21,3 +21,44 @@ public class PilhasExemplo {
         System.out.println("Quantidade minima de movimentos: " + movimentos);
     }
 }
+
+
+
+
+
+import java.util.Scanner;
+public class TorreHanoi {
+
+     public static void Movimentos (int discos, String T1, String T2, String T3){        
+           long Num_mov = 0;
+           for(int i=1; i>1; i++){ Num_mov++; }
+           if(discos == 1){
+           System.out.println("["+Num_mov +"]"+" Mova de "+T1+" para "+T2);
+            return;
+           }
+           Movimentos(discos-1, T1, T3, T2);
+           System.out.println("["+Num_mov +"]"+" Mova de "+T1+" para "+T2);
+           Num_mov ++;
+           Movimentos(discos-1, T3, T2, T1);
+    }
+        
+    public static void main(String[] args) {
+    Scanner leitor = new Scanner(System.in);    
+           System.out.print("Digite quantos discos sua torre tem: ");
+           int discos = leitor.nextInt();
+           
+           System.out.print("O nome do primeiro pino: ");
+           String T1 = leitor.next();
+           System.out.print("O nome do segundo pino: ");
+           String T2 = leitor.next();
+           System.out.print("O nome do terceiro pino: ");
+           String T3 = leitor.next();
+           
+           double mov = Math.pow(2, discos)-1;
+           System.out.println("Quantidade minima de movimentos: " + mov);
+           
+           System.out.println("Passo a passo dos movimentos:");
+           
+           Movimentos(discos,T1,T2,T3);
+    }
+}
