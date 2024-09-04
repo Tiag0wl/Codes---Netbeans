@@ -1,64 +1,33 @@
-package pilhas;
-
-import java.util.Stack;
 import java.util.Scanner;
-public class PilhasExemplo {
 
-    public static void main(String[] args) {
-    Stack <String> pilha = new Stack();
-    Scanner leitor = new Scanner(System.in);
-    
-        System.out.println(pilha.size());
-        System.out.println(pilha.isEmpty());
-        
-        System.out.println("Digite quantos discos sua torre tem");
-        int discos = leitor.nextInt();
-        
-        for(int i=0; i < discos; i++){
-        pilha.push("disco");
-        }
-    double movimentos = Math.pow(2, discos)-1;
-        System.out.println("Quantidade minima de movimentos: " + movimentos);
-    }
-}
-
-
-
-
-
-import java.util.Scanner;
 public class TorreHanoi {
 
-     public static void Movimentos (int discos, String T1, String T2, String T3){        
-           long Num_mov = 0;
-           for(int i=1; i>1; i++){ Num_mov++; }
-           if(discos == 1){
-           System.out.println("["+Num_mov +"]"+" Mova de "+T1+" para "+T2);
+    private static int num_mov = 0;
+
+    public static void movimentos(int discos, String origem, String destino, String apoio) {
+         if (discos == 1) {
+            num_mov++;
+            System.out.println("[" + num_mov + "] Mova de " + origem + " para " + destino);
             return;
-           }
-           Movimentos(discos-1, T1, T3, T2);
-           System.out.println("["+Num_mov +"]"+" Mova de "+T1+" para "+T2);
-           Num_mov ++;
-           Movimentos(discos-1, T3, T2, T1);
-    }
-        
+         }
+         movimentos(discos - 1, origem, apoio, destino);
+         num_mov++;
+         System.out.println("[" + num_mov + "] Mova de " + origem + " para " + destino);
+         movimentos(discos - 1, apoio, destino, origem);
+    }    
     public static void main(String[] args) {
-    Scanner leitor = new Scanner(System.in);    
-           System.out.print("Digite quantos discos sua torre tem: ");
-           int discos = leitor.nextInt();
-           
-           System.out.print("O nome do primeiro pino: ");
-           String T1 = leitor.next();
-           System.out.print("O nome do segundo pino: ");
-           String T2 = leitor.next();
-           System.out.print("O nome do terceiro pino: ");
-           String T3 = leitor.next();
-           
-           double mov = Math.pow(2, discos)-1;
-           System.out.println("Quantidade minima de movimentos: " + mov);
-           
-           System.out.println("Passo a passo dos movimentos:");
-           
-           Movimentos(discos,T1,T2,T3);
+         Scanner leitor = new Scanner(System.in);
+         System.out.print("Digite quantos discos sua torre tem: ");
+         int discos = leitor.nextInt();
+         String origem = "T1"; 
+         String destino = "T2";
+         String apoio = "T3";
+
+         int mov = (int) Math.pow(2, discos) - 1;
+         System.out.println("Quantidade minima de movimentos: " + mov);
+         System.out.println("E agora usando T1 para o pino de origem, T2 para o pino de destino e T3 para o pino de apoio;");
+         System.out.println("Veja o passo a passo de todos os " + mov +" movimentos com sua devida numeracao:");
+
+         movimentos(discos, origem, destino, apoio);
     }
 }
